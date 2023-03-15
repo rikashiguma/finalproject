@@ -87,3 +87,184 @@ div {
     background-color: rgb(119,136,153);
     color: var(--light);
 }
+
+/* Nav bar */
+
+ul {
+    list-style: none;
+    color: var(--dark);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+nav a {
+    background: var(--primary);
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: var(--dark);
+    box-shadow: var(--shadow);
+}
+
+nav li :hover {
+    background-color: rgb(119,136,153);
+    color: var(--light);
+}
+
+/* leaflet */
+
+.leaflet {
+    grid-area: showcase;
+    min-height: 400px;
+    background-image: url(https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+header {
+    display: block;
+}
+
+.ctop {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 'showcase showcase memb-a' 'showcase showcase pro-memb-b';
+}
+
+.leaflet h1 {
+    color: var(--light);
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+
+.leaflet p {
+    color: var(--light);
+    font-size: 1.3rem;
+    margin-top: 0;
+}
+
+/* Rbox */
+
+.rbox {
+    padding: 1.5rem;
+}
+
+.box {
+    background: var(--primary);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    box-shadow: var(--shadow);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+
+.memb-a {
+    grid-area: memb-a;
+    margin-bottom: 1.5rem;
+}
+
+.pro-memb-b {
+    grid-area: pro-memb-b;
+}
+
+.box .cost{
+    font-size: 2.5rem;
+}
+
+/* Icons */
+
+.icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+.icons div {
+    background: var(--primary);
+    color: var(--dark);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--shadow);
+}
+
+i {
+    font-weight: 900;
+    font-size: 4em;
+}
+
+/* info */
+.info {
+    background: var(--primary);
+    color: var(--dark);
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem;
+}
+
+/* images */
+imgs {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.imgs img {
+    box-shadow: var(--shadow);
+    /* width: 100%; */
+}
+img {
+    max-width: 100%;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--dark);
+    text-align: center;
+    color: var(--light);
+    font-family: 'Work Sans', sans-serif;
+    display: grid;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+footer p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+/* responsive web */
+@media (max-width: 500px) {
+    .ctop {
+        grid-template-areas: 'leaflet' 'memb-a' 'pro-memb-b';
+    }
+}
+
+@media (max-width: 750px) {
+    .ctop {
+        grid-template-areas: 'leaflet leaflet' 'memb-a pro-memb-b';
+    }
+    .leaflet h1 {
+        font-size: 2.5rem;
+    }
+    .info {
+        grid-template-columns: 1fr;
+    }
+}
